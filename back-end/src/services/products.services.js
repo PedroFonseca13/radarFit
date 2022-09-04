@@ -12,4 +12,14 @@ const getAllProducts = async () => {
   return result
 }
 
-module.exports = { create, getAllProducts }
+const findProductByID = async (id) => {
+  const product = await Product.findOne({
+    where: { id },
+    attributes: { exclude: ['createdAt', 'updatedAt'] },
+  });
+
+  console.log('Bug#1 ', product);
+  return product;
+};
+
+module.exports = { create, getAllProducts, findProductByID }
