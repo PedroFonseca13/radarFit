@@ -1,6 +1,6 @@
-import React from 'react'
-import Products from '../CardsProducts/Index'
-import './Section.css'
+import React from 'react';
+import Products from '../CardsProducts/Index';
+import './Section.css';
 
 export default function SectionProducts() {
   return (
