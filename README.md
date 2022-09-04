@@ -1,4 +1,4 @@
-# RadarFit Full-Stack Challenge
+# RadarFit Full-Stack Challenge (back-end)
 ```bash
 # Clone este repositório
 $ git clone git@github.com:PedroFonseca13/radarFit.git
