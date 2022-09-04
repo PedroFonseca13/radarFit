@@ -18,7 +18,6 @@ const findProductByID = async (id) => {
     attributes: { exclude: ['createdAt', 'updatedAt'] },
   });
 
-  console.log('Bug#1 ', product);
   return product;
 };
 

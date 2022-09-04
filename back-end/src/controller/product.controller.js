@@ -25,7 +25,6 @@ const findProductByID = async (req, res) => {
   try {
     const { id } = req.params;
     const product = await ProductService.findProductByID(id);
-    // console.log('Bug#2 ', product);
 
     if (!product) return res.status(404).json({ message: 'Product does not exist' });
 
