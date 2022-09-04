@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { getAllProducts } from '../../utils/fetchApi';
+import './Cards.css';
 
 export default function Index() {
   const [products, setProducts] = useState([]);
@@ -16,8 +16,8 @@ export default function Index() {
   return (
     <div>
       { products.map(product => (
-        <div className="">
-          <h3>{ product.productName }</h3>
+        <div className="card-products">
+          <h6>{ product.productName }</h6>
           <p>{ product.description }</p>
           <p>R$ { product.valor }</p>
         </div>

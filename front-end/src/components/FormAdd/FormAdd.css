@@ -1,0 +1,11 @@
+.form-add {
+  padding-top: 4rem;
+  padding-bottom: .8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  margin: 0
+}
