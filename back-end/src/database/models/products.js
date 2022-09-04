@@ -13,10 +13,13 @@ const createProductModel = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    productName: DataTypes.STRING,
+    product_name: DataTypes.STRING,
     description: DataTypes.STRING,
     value: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
+    underscored: true,
     tableName: 'products'
   })
 

@@ -1,4 +1,4 @@
-const ProductService = require('../services/user.services')
+const ProductService = require('../services/products.services')
 
 const createProduct = async (req, res) => {
   try {
@@ -11,4 +11,14 @@ const createProduct = async (req, res) => {
   }
 };
 
-module.exports = { createProduct }
+const getAllProducts = async (req, res) => {
+  try {
+    const result = await ProductService.getAllProducts()
+
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(error.status || 500).json({ message: error.message });
+  }
+}
+
+module.exports = { createProduct, getAllProducts }

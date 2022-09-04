@@ -6,4 +6,10 @@ const create = async (productName, description, valor) => {
   return newProduct;
 }
 
-module.exports = { create }
+const getAllProducts = async () => {
+  const result = await Product.findAll();
+
+  return result
+}
+
+module.exports = { create, getAllProducts }
