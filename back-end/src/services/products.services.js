@@ -21,4 +21,9 @@ const findProductByID = async (id) => {
   return product;
 };
 
-module.exports = { create, getAllProducts, findProductByID }
+const deleteProduct = async (id) => {
+  const product = await Product.destroy({ where: { id } });
+  return product;
+};
+
+module.exports = { create, getAllProducts, findProductByID, deleteProduct }

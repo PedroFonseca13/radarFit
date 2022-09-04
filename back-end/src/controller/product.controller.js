@@ -34,4 +34,14 @@ const findProductByID = async (req, res) => {
   }
 };
 
-module.exports = { createProduct, getAllProducts, findProductByID }
+const deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await ProductService.deleteProduct(id);
+    return res.status(200).send(`Produto ${id} deleted`);
+  } catch (error) {
+    res.status(error.status || 500).json({ message: error.message });
+  }
+};
+
+module.exports = { createProduct, getAllProducts, findProductByID, deleteProduct }
